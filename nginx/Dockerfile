@@ -1,8 +1,9 @@
 FROM alpine:3.7
 
-RUN apk update \
-    apk add nginx openrc 
-
+RUN apk update
+RUN apk add nginx openrc 
+RUN mkdir /run/nginx/
+RUN touch /run/nginx/nginx.pid
 COPY srcs/start.sh ./ 
 # RUN  mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig
 # COPY srcs/nginx.conf  /etc/nginx/

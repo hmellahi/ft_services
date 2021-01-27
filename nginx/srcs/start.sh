@@ -1,2 +1,2 @@
-rc-service nginx start
+rc-service nginx restart
 nginx -g "daemon off;"
